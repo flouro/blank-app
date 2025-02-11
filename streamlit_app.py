@@ -12,7 +12,7 @@ def heart_shape():
     x = 16 * np.sin(t) ** 3
     y = 13 * np.cos(t) - 5 * np.cos(2*t) - 2 * np.cos(3*t) - np.cos(4*t)
 
-    st.write("### ❤️ A Heart Full of Memories ❤️")
+    st.write("### 🤎 A Heart Full of Memories 🤎")
 
     images = ["photo_10_2025-02-11_18-27-25.jpg",
     "photo_11_2025-02-11_18-27-25.jpg",
@@ -64,7 +64,7 @@ def main():
         st.session_state.yes_clicked = False
     
     if not st.session_state.verified:
-        st.title("🔒 Verify Yourself")
+        st.title("🔒 Mailys Check")
         st.write("Please enter your birthday to proceed.")
         
         day = st.selectbox("Day", [str(i).zfill(2) for i in range(1, 32)])
@@ -77,7 +77,7 @@ def main():
             else:
                 st.error("Oops! Wrong birthday. Try again.")
     elif not st.session_state.yes_clicked:
-        st.title("💖 Will You Be My Valentine? 💖")
+        st.title("🤎 Will You Be My Valentine? 🤎")
         st.image("picture1.jpg", use_column_width=True)
         st.write("You’ve unlocked this special message just for you! 🌹")
         
@@ -89,7 +89,7 @@ def main():
             if st.button("🤔 Maybe...", key="maybe", help="Think about it!"):
                 st.warning("I’ll wait for your answer! 😘")
     else:
-        st.title("Yeaaa! 💖")
+        st.title("Yeaaa! 🤎")
         heart_shape()
        
 
